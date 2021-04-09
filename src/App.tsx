@@ -1,8 +1,9 @@
 import MoviesComponent from "./components/MoviesComponent"
+import LoginComponent from "./components/LoginComponent/LoginComponent"
 function App() {
     return (
         <div>
-            <MoviesComponent />
+            <LoginComponent />
         </div>
     )
 }
