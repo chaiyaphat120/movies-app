@@ -9,7 +9,7 @@ import {
 } from "@material-ui/core"
 import React, { useState } from "react"
 import { useStyles } from "./LoginComponentStyle"
-function LoginComponent() {
+const LoginComponent: React.FC = () => {
     const [showModal, setShowModal] = useState<boolean>(false)
     const styles = useStyles()
     const onClose = () => {
