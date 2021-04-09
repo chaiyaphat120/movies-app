@@ -1,19 +1,27 @@
 import { ActionType } from '../types/types'
 import { Action } from '../types/moviesType'
 interface RepositoriesState {
-    moviesList: Array<{ name: string, price: number, quantity: number }>
+    moviesList: Array<{
+        picture: string,
+        rate: string,
+        title: string,
+        years: string,
+        _id: string
+    }>
 }
 
 const initialState = {
     moviesList: [
-        { name: 'Article 1', price: 5, quantity: 10 },
-        { name: 'Article 2', price: 15, quantity: 8 },
-        { name: 'Article 3', price: 7, quantity: 15 },
-        { name: 'Article 4', price: 9, quantity: 5 },
-        { name: 'Article 5', price: 11, quantity: 100 },
-        { name: 'Article 6', price: 23, quantity: 20 },
+        {
+            picture: "noPic.png",
+            rate: "G",
+            title: "kongVSGodzila",
+            years: "2020",
+            _id: "606f3659590d36180c136176"
+        }
     ]
 }
+
 
 const moviesReducer = (
     state: RepositoriesState = initialState,
@@ -21,9 +29,19 @@ const moviesReducer = (
 ): RepositoriesState => {
     switch (action.type) {
         case ActionType.FETCH_DATA:
-            const { name, price, quantity } = action.payload
+            const { picture,
+                rate,
+                title,
+                years,
+                _id } = action.payload
             return {
-                moviesList: [...state.moviesList, { name, price, quantity }]
+                moviesList: [...state.moviesList, {
+                    picture,
+                    rate,
+                    title,
+                    years,
+                    _id
+                }]
             }
 
         default:

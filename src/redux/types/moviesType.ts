@@ -5,7 +5,11 @@ import { ActionType } from './types'
 interface FetchData {
     type: ActionType.FETCH_DATA
     payload: {
-        name: string, price: number, quantity: number
+        picture: string,
+        rate: string,
+        title: string,
+        years: string,
+        _id: string
     }
 }
 
