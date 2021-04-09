@@ -32,7 +32,6 @@ const MoviesComponent: React.FC = () => {
     }
     const getMoviesFormList = useCallback(async () => {
         const dataFormApi = await getMoviesList()
-        console.log(dataFormApi)
         dispatch({
             type: ActionType.FETCH_DATA,
             payload: {
@@ -56,6 +55,7 @@ const MoviesComponent: React.FC = () => {
 
     return (
         <div>
+            <h1>Movies List</h1>
             <button onClick={onSubmit}>Click</button>
             {todoComponent}
         </div>
