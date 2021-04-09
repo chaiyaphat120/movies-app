@@ -4,8 +4,9 @@ import { ThemeColors } from "../../constants/ThemeColor"
 export const useStyles = makeStyles({
     root: {
         display: "flex",
-        justifyContent: "center",
-        alignItems: "flex-start",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        flexDirection: "column",
         backgroundColor: ThemeColors.white,
         height: "97vh",
     },
@@ -19,5 +20,10 @@ export const useStyles = makeStyles({
         width: "80%",
         height: "80%",
         backgroundColor: "red",
+    },
+    form: {
+        marginTop: 30,
+        display: "flex",
+        flexDirection: "column",
     },
 })

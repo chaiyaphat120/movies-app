@@ -1,5 +1,13 @@
+import {
+    Box,
+    Container,
+    Modal,
+    TextField,
+    Typography,
+    Button,
+    Radio,
+} from "@material-ui/core"
 import React, { useState } from "react"
-import { Container, Typography, Button, Modal, Box } from "@material-ui/core"
 import { useStyles } from "./LoginComponentStyle"
 function LoginComponent() {
     const [showModal, setShowModal] = useState<boolean>(false)
@@ -13,8 +21,49 @@ function LoginComponent() {
     }
     return (
         <Container fixed maxWidth="xl" className={styles.root}>
-            <Typography variant="h4">Movies-App</Typography>
-            <Button onClick={onClick}>Click</Button>
+            <Box>
+                <Typography variant="h4">Movies-App Login</Typography>
+            </Box>
+            <Box className={styles.form}>
+                <Box>
+                    <TextField
+                        id="filled-password-input"
+                        label="username"
+                        type="username"
+                        autoComplete="current-username"
+                        variant="filled"
+                    />
+                </Box>
+                <Box style={{ marginTop: "10px" }}>
+                    <TextField
+                        id="filled-password-input"
+                        label="Password"
+                        type="password"
+                        autoComplete="current-password"
+                        variant="filled"
+                    />
+                </Box>
+                <Button style={{ marginTop: "10px" }}>Login</Button>
+            </Box>
+            <Box>
+                <Radio
+                    // checked={selectedValue === 'd'}
+                    // onChange={handleChange}
+                    value="d"
+                    color="default"
+                    name="radio-button-demo"
+                    inputProps={{ "aria-label": "D" }}
+                />
+                <Radio
+                    // checked={selectedValue === 'd'}
+                    // onChange={handleChange}
+                    value="d"
+                    color="default"
+                    name="radio-button-demo"
+                    inputProps={{ "aria-label": "D" }}
+                />
+            </Box>
+            {/* <Button onClick={onClick}>Click</Button> */}
             <Modal open={showModal} className={styles.modal} onClose={onClose}>
                 <Box className={styles.box}>
                     <Typography>Show List</Typography>
