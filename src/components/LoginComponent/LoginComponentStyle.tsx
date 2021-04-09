@@ -9,4 +9,15 @@ export const useStyles = makeStyles({
         backgroundColor: ThemeColors.white,
         height: "97vh",
     },
+    modal: {
+        width: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    box: {
+        width: "80%",
+        height: "80%",
+        backgroundColor: "red",
+    },
 })
