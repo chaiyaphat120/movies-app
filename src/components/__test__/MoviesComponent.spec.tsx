@@ -5,22 +5,20 @@ import { store } from "../../redux/index"
 import userEvent from "@testing-library/user-event"
 
 describe("MoviesComponent", () => {
-    it("Should display button and text in fist render", () => {
+    beforeEach(() => {
         render(
             <Provider store={store}>
                 <MoviesComponent />
             </Provider>
         )
+    })
+
+    it("Should display button and text in fist render", () => {
         screen.getByText(/Movies List/i)
         screen.getByRole("button", { name: "Click" })
     })
 
     it("Should display data from api", () => {
-        render(
-            <Provider store={store}>
-                <MoviesComponent />
-            </Provider>
-        )
         screen.getByText(/Movies List/i)
         screen.getByRole("button", { name: "Click" })
         userEvent.click(screen.getByRole("button", { name: "Click" }))
