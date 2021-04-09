@@ -12,13 +12,13 @@ interface RepositoriesState {
 
 const initialState = {
     moviesList: [
-        {
-            picture: "noPic.png",
-            rate: "G",
-            title: "kongVSGodzila",
-            years: "2020",
-            _id: "606f3659590d36180c136176"
-        }
+        // {
+        //     picture: "noPic.png",
+        //     rate: "G",
+        //     title: "kongVSGodzila",
+        //     years: "2020",
+        //     _id: "606f3659590d36180c136176"
+        // }
     ]
 }
 
